@@ -1,0 +1,42 @@
+//create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Adellia",
+    "email": "cobadoank2@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+###
+
+
+///get all  users
+
+GET http://localhost:5000/users
+
+###
+
+///get single user
+GET http://localhost:5000/users/85519f8a-2ed1-4795-aa55-2c4b1a224d20
+
+###
+
+///update user
+PATCH  http://localhost:5000/users/85519f8a-2ed1-4795-aa55-2c4b1a224d20
+Content-Type: application/json
+
+{
+    "name": "Adellia perubahan",
+    "email": "cobadoank2@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+
+///delete user
+DELETE  http://localhost:5000/users/85519f8a-2ed1-4795-aa55-2c4b1a224d20
