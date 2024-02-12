@@ -42,5 +42,5 @@ db.connect((err) => {
 });
 
 app.listen(8000, () => {
-  console.log("server ready..");
+  console.log("server ready..gan");
 });
