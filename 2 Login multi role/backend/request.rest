@@ -3,8 +3,8 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "Adellia",
-    "email": "cobadoank2@gmail.com",
+    "name": "Adellia3",
+    "email": "cobadoank5@gmail.com",
     "password": "123456",
     "confPassword": "123456",
     "role": "user"
@@ -47,7 +47,7 @@ POST http://localhost:5000/login
 Content-Type: application/json
 
 {
-    "email": "cobadoank2@gmail.com",
+    "email": "cobadoank5@gmail.com",
     "password": "123456"
 }
 
@@ -70,3 +70,8 @@ GET http://localhost:5000/me
 // logout
 
 DELETE http://localhost:5000/logout
+
+###
+//Get all Product
+
+GET http://localhost:5000/products
