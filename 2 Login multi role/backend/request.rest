@@ -73,5 +73,4 @@ DELETE http://localhost:5000/logout
 
 ###
 //Get all Product
-
 GET http://localhost:5000/products

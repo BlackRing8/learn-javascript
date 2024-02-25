@@ -1,5 +1,5 @@
 import Products from "../models/ProductModel.js";
-import Users from "../models/UserModel.js";
+import User from "../models/UserModel.js";
 
 export const getProducts = async (req, res) => {
   try {
@@ -8,18 +8,18 @@ export const getProducts = async (req, res) => {
       response = await Products.findAll({
         include: [
           {
-            model: Users,
+            model: User,
           },
         ],
       });
     } else {
       response = await Products.findAll({
         where: {
-          userId: req.userId,
+          userId: "userId",
         },
         include: [
           {
-            model: Users,
+            model: User,
           },
         ],
       });
