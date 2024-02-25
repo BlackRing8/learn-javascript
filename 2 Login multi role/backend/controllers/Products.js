@@ -15,7 +15,7 @@ export const getProducts = async (req, res) => {
     } else {
       response = await Products.findAll({
         where: {
-          userId: "userId",
+          userId: req.session.userId,
         },
         include: [
           {
@@ -30,7 +30,16 @@ export const getProducts = async (req, res) => {
   }
 };
 
-export const getProductsById = (req, res) => {};
+export const getProductsById = async (req, res) => {
+  const { name, price } = req.body;
+  try {
+    await Products.create({
+      name: name,
+      price: price,
+      userId: req.session.userId,
+    });
+  } catch (error) {}
+};
 
 export const createProducts = (req, res) => {};
 
